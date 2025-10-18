@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Markazi+Text:wght@400..700&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Vazirmatn:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .input {
+    @apply rounded-lg border bg-stone-50 border-stone-200 px-2 h-7 py-1 text-stone-500 disabled:bg-stone-200 text-sm transition-all duration-300 focus:outline-none focus:ring focus:ring-yellow-400 sm:h-9 sm:py-2;
+  }
+  @layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    -webkit-animation: loading 1s infinite linear;
+    animation: loading 1s infinite linear;
+  }
+
+  @-webkit-keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-text-fill-color: #78716c;
+  -webkit-box-shadow: 0 0 0px 1000px #eff6ff inset !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px transparent;
+}
+
+/* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
