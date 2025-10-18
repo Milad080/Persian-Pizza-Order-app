@@ -10,7 +10,7 @@ function AppLayout() {
     <div className="grid grid-rows-[auto_1fr_auto] h-dvh">
       {isLoading && <Loader />}
       <Header />
-      <main className="flex flex-col gap-3 mx-auto w-full max-w-3xl overflow-scroll no-scrollbar">
+      <main className="flex flex-col gap-3 mx-auto w-full max-w-4xl overflow-scroll no-scrollbar">
         <Outlet />
       </main>
       {showCartOverview && <CartOverview />}

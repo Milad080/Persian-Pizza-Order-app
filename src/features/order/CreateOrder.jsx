@@ -30,7 +30,7 @@ function CreateOrder() {
   const formErrors = useActionData();
   const dispatch = useDispatch();
   const totalCartPrice = useSelector(getTotalCartPrice);
-  const priorityPrice = withPriority ? (totalCartPrice * 0.2) / 8 : 0;
+  const priorityPrice = withPriority ? (totalCartPrice * 0.2) / 2 : 0;
   const totalPrice = totalCartPrice + priorityPrice;
   if (!cart.length) return <EmptyCart />;
   return (
@@ -112,9 +112,9 @@ function CreateOrder() {
         </div>
 
         <div className="bg-yellow-300 border-yellow-200 border text-stone-900 py-5 text-sm px-5 rounded-lg flex flex-col gap-3">
-          <div className="mb-4 flex items-center sm:text-lg">
+          <div className="mb-4 flex items-center sm:text-lg md:text-xl">
             <input
-              className="h-5 w-5 accent-yellow-900 focus:outline-none cursor-pointer sm:size-5 "
+              className="size-5 accent-yellow-900 focus:outline-none cursor-pointer sm:size-6 md:size-7"
               type="checkbox"
               name="priority"
               id="priority"
@@ -126,15 +126,22 @@ function CreateOrder() {
             </label>
           </div>
           <p>
-            <span className="font-medium text-base">هزینه اولویت بندی : </span>
+            <span className="font-medium text-base sm:text-lg">
+              هزینه اولویت بندی :{" "}
+            </span>
             {withPriority ? `${formatCurrency(priorityPrice)}` : "  --- "}
           </p>
           <p>
-            <span className="font-medium text-base"> قیمت پیتزا : </span>
+            <span className="font-medium text-base sm:text-lg">
+              {" "}
+              قیمت پیتزا :{" "}
+            </span>
             {formatCurrency(totalCartPrice)}
           </p>
           <p>
-            <span className="font-bold text-base">جمع قابل پرداخت : </span>
+            <span className="font-bold text-base sm:text-lg">
+              جمع قابل پرداخت :{" "}
+            </span>
             {formatCurrency(totalPrice)}
           </p>
           <div className="sm:mt-12">

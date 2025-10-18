@@ -95,11 +95,11 @@ function Order() {
         </p>
         {priority && (
           <p className="font-medium text-stone-800">
-            هزینه اولویت بندی : {formatCurrency(priorityPrice / 8)}
+            هزینه اولویت بندی : {formatCurrency(priorityPrice / 2)}
           </p>
         )}
         <p className="text-lg font-bold text-stone-900">
-          قابل پرداخت : {formatCurrency(orderPrice + priorityPrice / 8)}
+          قابل پرداخت : {formatCurrency(orderPrice + priorityPrice / 2)}
         </p>
       </div>
     </div>
