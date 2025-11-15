@@ -1,5 +1,6 @@
 const API_URL = "https://react-fast-pizza-api.jonas.io/api";
 
+// در src/services/apiRestaurant.js
 export async function getMenu() {
   const res = await fetch(`${API_URL}/menu`);
   if (!res.ok) throw Error("Failed getting menu");
