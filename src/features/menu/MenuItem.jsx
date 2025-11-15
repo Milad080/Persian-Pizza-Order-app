@@ -25,7 +25,9 @@ function MenuItem({ pizza }) {
       <img
         src={imageUrl}
         alt={name}
-        className={`h-24 sm:h-28 w-44 ${soldOut ? "opacity-70 grayscale" : ""}`}
+        className={`h-24 w-32 sm:h-28 sm:w-44 ${
+          soldOut ? "opacity-70 grayscale" : ""
+        }`}
       />
       <div className="flex flex-col flex-grow pt-0.5">
         <p className="font-semibold">{name}</p>
