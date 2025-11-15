@@ -8,7 +8,7 @@ export async function getMenu() {
 
   const fixedData = data.map((item) => ({
     ...item,
-    imageUrl: `/images/${item.imageUrl.split("/").pop()}`,
+    imageUrl: `./images/${item.imageUrl.split("/").pop()}`,
   }));
 
   return fixedData;
