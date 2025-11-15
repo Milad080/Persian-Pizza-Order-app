@@ -5,6 +5,7 @@ import { addItem, getCurrentQuantityById } from "../cart/cartSlice";
 import DeleteItem from "../cart/DeleteItem";
 import UpdateItemQuantity from "../cart/UpdateItemQuantity";
 function MenuItem({ pizza }) {
+  console.log(pizza);
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
   const dispatch = useDispatch();
   const currentQuantity = useSelector(getCurrentQuantityById(id));
@@ -25,7 +26,7 @@ function MenuItem({ pizza }) {
       <img
         src={imageUrl}
         alt={name}
-        className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}
+        className={`h-24 sm:h-28 w-44 ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
       <div className="flex flex-col flex-grow pt-0.5">
         <p className="font-semibold">{name}</p>

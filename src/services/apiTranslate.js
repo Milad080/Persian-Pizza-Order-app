@@ -14,7 +14,7 @@ const pizzaDictionary = {
   "Spinach and Mushroom": "اسفناج و قارچ",
   Mediterranean: "مدیترانه‌ای",
   Greek: "یونانی",
-  Abruzzese: "آبروتزه",
+  Abruzzese: "آربیز",
   "Pesto Chicken": "چیکن پستو",
   "Eggplant Parmesan": "بادمجان پارمزان",
   "Roasted Veggie": "سبزیجات کبابی",
